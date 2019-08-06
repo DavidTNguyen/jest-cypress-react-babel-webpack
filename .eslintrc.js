@@ -12,22 +12,10 @@ module.exports = {
     'import/named': 'off',
   },
   settings: {'import/resolver': 'node'},
-  plugins: ['eslint-plugin-cypress'],
-  env: {'cypress/globals': true},
   overrides: [
     {
       files: ['**/src/**'],
       settings: {'import/resolver': 'webpack'},
-    },
-    {
-      files: ['**/__tests__/**'],
-      settings: {
-        'import/resolver': {
-          jest: {
-            jestConfigFile: path.join(__dirname, './jest.config.js'),
-          },
-        },
-      },
     },
   ],
 }
